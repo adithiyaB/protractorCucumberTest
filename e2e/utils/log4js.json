@@ -9,7 +9,7 @@
     "file" : {
         "category": "test-file-appender",
         "type": "file",
-        "filename": "logs/logFile.log"
+        "filename": "logFile.log"
     }
     },
     "categories": {
