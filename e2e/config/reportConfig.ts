@@ -1,7 +1,7 @@
 import reporter from "cucumber-html-reporter";
 import { resolve } from "path";
 
-var options: any = {
+const options: any = {
         theme: "bootstrap",
         jsonFile: resolve(`reports/tempReportFolder/result.json`),
         output: resolve(`reports/tempReportFolder/cucumber_report.html`),

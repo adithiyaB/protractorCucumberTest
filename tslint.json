@@ -1,0 +1,27 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended"
+    ],
+    "jsRules": {},
+    "rules": {},
+    "rulesDirectory": [],
+    "whitespace": [
+        true,
+        "check-branch",
+        "check-operator",
+        "check-decl",
+        "check-module",
+        "check-type",
+        "check-preblock"
+      ],
+      "no-consecutive-blank-lines": [
+        true,
+        2
+      ],
+      "no-console": [
+        true,
+        "allow-error",
+        "allow-warn"
+      ]
+}

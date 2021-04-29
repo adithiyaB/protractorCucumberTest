@@ -1,17 +1,25 @@
-import { logger } from "./../../utils/logging";
 
 import { Then, When } from "cucumber";
+import { julieMrCalculator } from "./pageIndex";
 
-When(/^I login into the application$/, () => {
+
+
+When(/^I enter inputs as "([^"]*)" and "([^"]*)"$/, async (input1,input2) => {
+	await julieMrCalculator.enterInputValues(input1,input2);
 	return true;
 });
 
-When(/^I verify title$/, () => {
-	console.log("step2");
+Then(/^I verify result is "([^"]*)"$/, async (result) => {
+	await julieMrCalculator.validateResult(result);
 	return true;
 });
 
-Then(/^I add two numbers$/, () => {
-	console.log("step-3");
+When(/^I select operator "([^"]*)"$/, async (operator) => {
+	await julieMrCalculator.selectOperator(operator);
+	return true;
+});
+
+When(/^I click on go button$/, async () => {
+	await julieMrCalculator.clickOnGoButton();
 	return true;
 });

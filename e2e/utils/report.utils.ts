@@ -1,4 +1,4 @@
-import fs, { existsSync } from "fs";
+import fs from "fs";
 import { resolve } from "path";
 
 export function reportFolderNameReplace(): void {

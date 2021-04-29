@@ -2,7 +2,7 @@ import { resolve } from "path";
 import { browser } from "protractor";
 
 // tslint:disable-next-line:typedef
-export var config = {
+export let config = {
   onPrepare: async () => {
     await browser.manage().window().maximize();
   },
