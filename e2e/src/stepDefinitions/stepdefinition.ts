@@ -1,13 +1,8 @@
-// import { Then, When } from "@cucumber/cucumber";
-import { browser } from "protractor";
+import { logger } from "./../../utils/logging";
 
 import { Then, When } from "cucumber";
-import { assert } from "console";
 
 When(/^I login into the application$/, () => {
-	browser.get("https://juliemr.github.io/protractor-demo/");
-	// throw new Error("not valid");
-	console.log("step1");
 	return true;
 });
 

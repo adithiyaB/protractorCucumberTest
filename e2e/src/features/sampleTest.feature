@@ -1,6 +1,6 @@
 Feature: Test feature1
 
-# @Smoke
+@Smoke
 Scenario: Cucumber sample test1
     When I login into the application
     And I verify title

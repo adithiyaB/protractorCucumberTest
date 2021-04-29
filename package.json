@@ -4,17 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "tsc": "tsc",
-    "pretest": "npm run tsc",
-    "test": "protractor outputjs/config/conf.js",
-    "posttest": "node outputjs/config/reportConfig.js"
+    "tsc": "tsc -p tsconfig.json",
+    "pretest": "npm run tsc && npm run reportFolderCreation",
+    "reportFolderCreation": "node dist/e2e/utils/report.utils.js",
+    "test": "protractor dist/e2e/config/conf.js",
+    "posttest": "node dist/e2e/config/reportConfig.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@types/jasmine": "^3.6.1",
     "chromedriver": "86.0.4240.22",
-    "log4js": "^6.3.0",
     "webdriver-manager": "^12.1.7"
   },
   "devDependencies": {
@@ -27,6 +27,8 @@
     "cucumber-html-reporter": "^5.2.0",
     "jasmine": "3.6.3",
     "jest": "^26.6.3",
+    "log4js": "^6.3.0",
+    "log4js-protractor-appender": "^1.1.2",
     "protractor": "7.0.0",
     "protractor-cucumber-framework": "^6.2.1",
     "typescript": "3.6.3"

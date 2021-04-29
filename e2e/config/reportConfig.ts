@@ -1,14 +1,10 @@
 import reporter from "cucumber-html-reporter";
 import { resolve } from "path";
-import { browser } from "protractor";
-import { reportFolderName } from "../utils/reporter";
-import { config } from "./conf";
-// import { reportFolderName } from "../utils/reporter";
 
 var options: any = {
         theme: "bootstrap",
-        jsonFile: resolve(`reports/result.json`),
-        output: resolve(`reports/cucumber_report.html`),
+        jsonFile: resolve(`reports/tempReportFolder/result.json`),
+        output: resolve(`reports/tempReportFolder/cucumber_report.html`),
         reportSuiteAsScenarios: true,
         scenarioTimestamp: true,
         launchReport: true,
