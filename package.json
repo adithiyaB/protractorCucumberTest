@@ -8,7 +8,7 @@
     "pretest": "npm run tsc && npm run reportFolderCreation",
     "reportFolderCreation": "node dist/e2e/utils/report.utils.js",
     "test": "protractor dist/e2e/config/conf.js",
-    "posttest": "node dist/e2e/config/reportConfig.js"
+    "posttest1": "node dist/e2e/config/reportConfig.js"
   },
   "author": "",
   "license": "ISC",
