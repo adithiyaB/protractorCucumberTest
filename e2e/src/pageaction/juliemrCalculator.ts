@@ -1,4 +1,4 @@
-import { getElement } from './../../utils/getElement.utils';
+import { getElement, getDynamicElement } from './../../utils/getElement.utils';
 import { expect } from 'chai';
 import { element } from 'protractor';
 import { by, ElementFinder } from 'protractor';
@@ -8,7 +8,7 @@ export class JulieMrCalculator {
         // await element(by.model("first")).sendKeys(input1);
         // await element(by.model("second")).sendKeys(input2);
         await getElement("juliemrCalculator.firstInput").sendKeys(input1);
-        await getElement("juliemrCalculator.secondInput").sendKeys(input2);
+        await getDynamicElement("model","second").sendKeys(input2);
     }
 
     public async selectOperator(selectOption:string) {

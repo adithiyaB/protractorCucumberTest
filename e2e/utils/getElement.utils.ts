@@ -29,6 +29,10 @@ export const getJsonKey = (
   return locator;
 };
 
+export const getDynamicElement = (locatorType: "id"|"xpath"|"model"|"binding",locatorVal: string) => {
+  return getLocator(locatorType, locatorVal);
+}
+
 export const getLocator = (locatorType: string, locatorVal: string) => {
   switch (locatorType.toLowerCase()) {
     case "id":
