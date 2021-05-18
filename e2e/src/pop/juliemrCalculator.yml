@@ -1,0 +1,9 @@
+id:
+  test: "bb"
+  test2: "2"
+model:
+  juliemrCalculator.firstInput: "first"  
+  juliemrCalculator.secondInput: "second"
+  juliemrCalculator.operatorDdwn: "operator"
+xpath:
+  juliemrCalculator.resultValTxt: "//h2[@class='ng-binding']"

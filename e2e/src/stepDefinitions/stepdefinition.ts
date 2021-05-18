@@ -1,10 +1,13 @@
 
 import { Then, When } from "cucumber";
+import { logger } from "../../utils/logging.utils";
 import { julieMrCalculator } from "./pageIndex";
 
 
 
 When(/^I enter inputs as "([^"]*)" and "([^"]*)"$/, async (input1,input2) => {
+	// logger.info("Test");
+	// logger.debug("TestDebug");
 	await julieMrCalculator.enterInputValues(input1,input2);
 	return true;
 });

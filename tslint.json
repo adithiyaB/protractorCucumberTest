@@ -4,7 +4,9 @@
         "tslint:recommended"
     ],
     "jsRules": {},
-    "rules": {},
+    "rules": {
+      "no-console": false
+    },
     "rulesDirectory": [],
     "whitespace": [
         true,
@@ -18,10 +20,10 @@
       "no-consecutive-blank-lines": [
         true,
         2
-      ],
-      "no-console": [
-        true,
-        "allow-error",
-        "allow-warn"
       ]
+      // "no-console": [
+      //   true,
+      //   "allow-error",
+      //   "allow-warn"
+      // ]
 }

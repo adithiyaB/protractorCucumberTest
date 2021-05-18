@@ -7,7 +7,7 @@ import {
   Status,
 } from "cucumber";
 import { browser } from "protractor";
-import { logger } from "../../utils/logging";
+import { logger } from "../../utils/logging.utils";
 import fs from "fs";
 import { resolve } from "path";
 
