@@ -5,7 +5,7 @@
     ],
     "jsRules": {},
     "rules": {
-      "no-console": false
+      "no-console": false      
     },
     "rulesDirectory": [],
     "whitespace": [
@@ -20,7 +20,8 @@
       "no-consecutive-blank-lines": [
         true,
         2
-      ]
+      ],
+      "no-unused-variable": true
       // "no-console": [
       //   true,
       //   "allow-error",
