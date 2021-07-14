@@ -8,7 +8,7 @@ import { reportOptions } from "./reportConfig";
 export let config = {
   onPrepare: async () => {
     await browser.manage().window().maximize();
-    await browser.manage().timeouts().implicitlyWait(10000);
+    // browser.manage().timeouts().implicitlyWait(10000);
   },
   onComplete: async() => {
     reporter.generate(reportOptions);
@@ -17,21 +17,10 @@ export let config = {
     username: "test",
     pageObject: getPageObject(resolve("e2e/src/pop"))
   },
-  framework: "custom",
-  frameworkPath: require.resolve("protractor-cucumber-framework"),
+  framework: "jasmine",
   SELENIUM_PROMISE_MANAGER: false,
-  cucumberOpts: {
-    require: [resolve("dist/e2e/src/stepDefinitions/*.js")],
-    format: [`json:reports/tempReportFolder/result.json`,'rerun:@rerun.txt'],
-    // tags: ["@Smoke"]
-  },
   capabilities: {
     browserName: "chrome",
-    chromeOptions: {
-      // "debuggerAddress": 'localhost:50161'
-      // 'args': [ '--start-maximized', 'disable-infobars', '--headless']
-      'args': [ '--start-maximized', 'disable-infobars']
-    },
     // browserName: "MicrosoftEdge",
 
     shardTestFiles: false,
@@ -41,7 +30,7 @@ export let config = {
     // marionette: true,
     // acceptSSLCerts: true
   },
-  specs: [resolve("e2e/src/features/*.feature")],
+  specs: [''],
   seleniumAddress: "http://localhost:4444/wd/hub",
   // seleniumArgs: ['-Dwebdriver.edge.driver=C:/Users/adithiya./OneDrive - Wolters Kluwer/Documents/selenium driver/msedgedriver.exe'],
 };

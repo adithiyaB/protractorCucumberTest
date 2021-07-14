@@ -1,4 +1,3 @@
-import reporter from "cucumber-html-reporter";
 import { resolve } from "path";
 
 export const reportOptions: any = {

@@ -7,8 +7,9 @@
     "tsc": "tsc -p tsconfig.json",
     "pretest": "npm run tsc && npm run reportFolderCreation",
     "reportFolderCreation": "node dist/e2e/utils/report.utils.js",
-    "test": "protractor dist/e2e/config/conf.js",
-    "posttest1": "node dist/e2e/config/reportConfig.js"
+    "e2eTest": "protractor dist/e2e/config/conf.js --format rerun:@rerun.txt",
+    "test": "npm run e2eTest && npm run rerun",
+    "rerun": "protractor dist/e2e/config/conf.js --cucumberOpts.rerun=@rerun.txt"
   },
   "author": "",
   "license": "ISC",
@@ -21,6 +22,7 @@
     "@types/chai": "^4.2.14",
     "@types/cucumber": "^6.0.1",
     "@types/node": "^12.19.16",
+    "@types/yargs": "^17.0.1",
     "chai": "^4.2.0",
     "cucumber": "^6.0.5",
     "cucumber-html-reporter": "^5.2.0",
@@ -32,7 +34,8 @@
     "protractor": "7.0.0",
     "protractor-cucumber-framework": "^6.2.1",
     "typescript": "3.6.3",
-    "yaml": "^1.10.2"
+    "yaml": "^1.10.2",
+    "yargs": "^17.0.1"
   },
   "jest": {
     "transform": {

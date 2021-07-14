@@ -1,3 +1,4 @@
+// import { browserName } from './../../utils/yargsUtils';
 import {
   After,
   AfterAll,
@@ -8,8 +9,7 @@ import {
 } from "cucumber";
 import { browser } from "protractor";
 import { logger } from "../../utils/logging.utils";
-import fs from "fs";
-import { resolve } from "path";
+// import { args } from "../../utils/yargsUtils";
 
 BeforeAll(async () => {
   await browser.manage().deleteAllCookies();
@@ -19,6 +19,10 @@ Before(async () => {
   logger.info(
     "************************Invoking Application************************"
   );
+  console.log(browser.params.username)
+  // console.log(await browser.getCapabilities());
+  // console.log(args[1]);
+  // console.log(args[0]);
   await browser.get("https://juliemr.github.io/protractor-demo/");
 });
 
@@ -34,15 +38,15 @@ Before(async () => {
 After(async function(scenario: HookScenarioResult) {
     const self: any = this;
   if (scenario.result.status === Status.FAILED) {
-    const dt: Date = new Date();
-    const timeNow: string =
-      "Screenshot" +
-      dt.getFullYear().toString() +
-      (dt.getMonth() + 1).toString() +
-      dt.getDate().toString() +
-      dt.getHours().toString() +
-      dt.getMinutes().toString() +
-      dt.getSeconds().toString();
+    // const dt: Date = new Date();
+    // const timeNow: string =
+    //   "Screenshot" +
+    //   dt.getFullYear().toString() +
+    //   (dt.getMonth() + 1).toString() +
+    //   dt.getDate().toString() +
+    //   dt.getHours().toString() +
+    //   dt.getMinutes().toString() +
+    //   dt.getSeconds().toString();
 
     const screenShotFail  = await browser.takeScreenshot();
     self.attach(new Buffer(screenShotFail, 'base64'), 'image/png');
